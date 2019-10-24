@@ -1,17 +1,16 @@
 @extends ('layouts.scaffold')
 @section ('section')
-    @include('partial._company_navbar')
     <div class="container-fluid section-with-top">
         <div class="row">
             <div class="col-md-8 offset-md-2">
-                <form class="" method="post" action="{{route('cpn.postLogin')}}" enctype="multipart/form-data">
+                <form class="" method="post" action="{{route('postLogin')}}" enctype="multipart/form-data">
                     {!!csrf_field()!!}
                     <div class="card">
                         <div class="card-body padding-0">
                             <table class="table table-bordered margin-bottom-0">
                                 <tr>
                                     <td>
-                                        <h3 class="h3-mobile title-margin-0 text-center">登入企業後台</h3>
+                                        <h3 class="h3-mobile title-margin-0 text-center">登入管理後台</h3>
                                     </td>
                                 </tr>
                                 <tr>
@@ -41,13 +40,6 @@
 
 @stop
 @section('javascript')
-    <script>
-        $(document).ready(function() {
-
-            $('div[data-name="nav-company-login"]').addClass('nav-active');
-
-        });
-    </script>
 @endsection
 
 

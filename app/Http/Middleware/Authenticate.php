@@ -40,14 +40,13 @@ class Authenticate
             if ($request->ajax()) {
                 return response('Unauthorized.', 401);
             } else {
-                return redirect()->guest('teacher/login');
+                return redirect()->guest('');
             }
         }
         $user = Auth::user();
-        if($user->user_type_code_abbr !== 'TCH'){
+        if($user->user_type_code_abbr !== 'ADMIN'){
             Auth::logout();
-            Flash::error('此帳號並非講師帳號，若要登入講師管理後台，請重新登入對應之講師帳號');
-            return redirect()->route('tch.login');
+            return redirect()->route('login');
         }
 
         return $next($request);

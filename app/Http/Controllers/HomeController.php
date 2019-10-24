@@ -4,25 +4,41 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Http\Request as HttpRequest;
+use Illuminate\Support\Facades\Log;
 
 class HomeController extends Controller
 {
    public function home(){
 
-        $lectures = DB::table('lct_lecture')
-            ->select('lecture_id', 'lecture_hour_type_abbr', 'lecture_hour', 'lecture_name', 'lecture_description',
-                'hourly_rate', 'total_price')
-            ->get();
-
-        $city_ids = DB::table('lookup_city')->lists('name', 'city_id');
-        $district_ids = DB::table('lookup_district')->select('city_id', 'district_id', 'name')->get();
-        $district_ids = collect($district_ids)->groupBy('city_id');
-
-        $data = compact('lectures', 'city_ids', 'district_ids');
-
-        return view('home', $data);
+       return view('login');
    }
+
+    public function postLogin(HttpRequest $request){
+
+        $email_login = $request['email_login'];
+        $password = $request['password'];
+
+        if (Auth::attempt(['email_login' => $email_login, 'password' => $password]))
+        {
+            $user = Auth::user();
+
+            if($user->user_type_code_abbr == 'ADMIN'){
+
+                Log::info('here');
+                // Authentication passed...
+                \Session::flash('success', '登入成功' );
+                return redirect()->route('main');
+            }
+
+        }
+
+        \Session::flash('error', '帳號密碼錯誤！' );
+
+        return redirect()->back()->withInput();
+
+    }
 }

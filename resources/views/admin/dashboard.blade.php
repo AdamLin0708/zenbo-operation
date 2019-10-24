@@ -10,33 +10,14 @@
       </div>
 
       <div class="sidebar-header">
-        <h3><a href="{{route('cpn.admin.main')}}">企業管理後台</a></h3>
+        <h3><a href="{{route('main')}}">Zenbo管理後台</a></h3>
       </div>
       <ul class="list-unstyled components">
         <li>
-          <a href="{{ route('cpn.admin.createLectureRequest') }}">建立講座預約單</a>
+          <a href="#">建立講座預約單</a>
         </li>
         <li>
-          <a href="#companyInfoSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">企業資料</a>
-          <ul class="collapse list-unstyled" id="companyInfoSubmenu">
-            <li>
-              <a href="{{ route('cpn.admin.editProfile') }}">企業基本資料修改</a>
-            </li>
-          </ul>
-        </li>
-        <li>
-          <a href="#lectureOrderInfo" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">訂單相關</a>
-          <ul class="collapse list-unstyled" id="lectureOrderInfo">
-            <li>
-              <a href="{{ route('cpn.admin.orderLists') }}">訂單列表</a>
-            </li>
-            <li>
-              <a href="{{ route('cpn.admin.requestLists') }}">預約單列表</a>
-            </li>
-          </ul>
-        </li>
-        <li>
-          <a href="{{ route('cpn.admin.logout')  }}">登出</a>
+          <a href="{{ route('logout')  }}">登出</a>
         </li>
       </ul>
     </nav>
@@ -56,7 +37,7 @@
                 @endif
               </li>
               <li class="nav-item">
-                <a href="{{ route('cpn.admin.logout')  }}"><i class="fas fa-sign-out-alt"></i> Logout</a>
+                <a href="{{ route('logout')  }}"><i class="fas fa-sign-out-alt"></i> Logout</a>
               </li>
             </ul>
           </div>

@@ -18,27 +18,5 @@ class CompanyController extends Controller
         return view('company.login');
     }
 
-    public function postLogin(HttpRequest $request){
 
-        $email_login = $request['email_login'];
-        $password = $request['password'];
-
-        if (Auth::attempt(['email_login' => $email_login, 'password' => $password]))
-        {
-            $user = Auth::user();
-
-            if($user->user_type_code_abbr == 'CPN'){
-
-                // Authentication passed...
-                \Session::flash('success', '登入成功' );
-                return redirect()->route('cpn.admin.main');
-            }
-
-        }
-
-        \Session::flash('error', '帳號密碼錯誤！' );
-
-        return redirect()->back()->withInput();
-
-    }
 }
