@@ -1,0 +1,654 @@
+/*
+    DEMO STYLE
+*/
+
+@import "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700";
+
+@font-face {
+  font-family: MElleHK;
+  src: url('/fonts/MElleHK-Medium.ttf');
+}
+
+//bootstrap query width
+$mobile-max: 768px;
+
+$pad-max: 992px;
+$laptop-min: 1100px;
+$timeline-breakpoint: 900px;
+$xs-mobile: 330px;
+$normal-mobile: 400px;
+$large-mobile: 500px;
+$mobile-landscape: 620px;
+$lg-laptop: 1300px;
+
+//brand color
+$default_color: #69A545;
+
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #fafafa;
+}
+
+p {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.1em;
+  font-weight: 300;
+  line-height: 1.7em;
+  color: #999;
+}
+
+a,
+a:hover,
+a:focus {
+  color: inherit;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+
+.navbar {
+  padding: 15px 10px;
+  background: #fff;
+  border: none;
+  border-radius: 0;
+  //box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-btn {
+  box-shadow: none;
+  outline: none !important;
+  border: none;
+}
+
+.line {
+  width: 100%;
+  height: 1px;
+  border-bottom: 1px dashed #ddd;
+  margin: 40px 0;
+}
+
+.row {
+  margin-left: 0px;
+  margin-right: 0px;
+}
+
+
+
+/* ---------------------------------------------------
+    FAB STYLE
+----------------------------------------------------- */
+
+.decorate-list {
+  list-style: none;
+}
+
+.decorate-list::before {
+  content: "•";
+  color: #8CC63F;
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
+  font-size: 24px;
+}
+
+.number-text-gradient {
+  background-image: linear-gradient(90deg, #FBB03B, #E9541B);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.list-height {
+  line-height: 2em;
+}
+
+.no-box-shadow {
+  box-shadow: none;
+}
+
+/* ---------------------------------------------------
+    FAB STYLE
+----------------------------------------------------- */
+
+.btn-group .btn-fab{
+  position: fixed !important;
+  right: 20px;
+}
+#main{
+  bottom: 20px;
+}
+
+/* ---------------------------------------------------
+    BACKGROUND STYLE
+----------------------------------------------------- */
+.bg-white {
+  background-color: #ffffff;
+}
+
+.bg-lecture-web {
+  background-color: $default_color;
+}
+
+/* ---------------------------------------------------
+    LOGO STYLE
+----------------------------------------------------- */
+
+.logo-width {
+  width: 20%;
+}
+
+@media (max-width:$pad-max){
+  .logo-width {
+    width: 40%;
+  }
+}
+
+
+/* ---------------------------------------------------
+    SIDEBAR STYLE
+----------------------------------------------------- */
+
+.sidebar-cus {
+  width: 250px;
+  position: fixed;
+  top: 0;
+  left: -250px;
+  height: 100vh;
+  z-index: 999;
+  background: #7386D5;
+  color: #fff;
+  transition: all 0.3s;
+  overflow-y: scroll;
+  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);
+}
+
+.sidebar-cus.active {
+  left: 0;
+}
+
+.dashboard-dismiss {
+  width: 35px;
+  height: 35px;
+  line-height: 35px;
+  text-align: center;
+  background: #7386D5;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.dashboard-dismiss:hover {
+  background: #fff;
+  color: #7386D5;
+}
+
+.overlay {
+  display: none;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 998;
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
+}
+.overlay.active {
+  display: block;
+  opacity: 1;
+}
+
+.sidebar-cus .sidebar-header {
+  padding: 20px;
+  background: #6d7fcc;
+}
+
+.sidebar-cus ul.components {
+  padding: 20px 0;
+  border-bottom: 1px solid #47748b;
+}
+
+.sidebar-cus ul p {
+  color: #fff;
+  padding: 10px;
+}
+
+.sidebar-cus ul li a {
+  padding: 10px;
+  font-size: 1.1em;
+  display: block;
+}
+
+.sidebar-cus ul li a:hover {
+  color: #7386D5;
+  background: #fff;
+}
+
+.sidebar-cus ul li.active>a,
+a[aria-expanded="true"] {
+  color: #fff;
+  background: #6d7fcc;
+}
+
+a[data-toggle="collapse"] {
+  position: relative;
+}
+
+.dropdown-toggle::after {
+  display: block;
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+}
+
+ul ul a {
+  font-size: 0.9em !important;
+  padding-left: 30px !important;
+  background: #6d7fcc;
+}
+
+ul.CTAs {
+  padding: 20px;
+}
+
+ul.CTAs a {
+  text-align: center;
+  font-size: 0.9em !important;
+  display: block;
+  border-radius: 5px;
+  margin-bottom: 5px;
+}
+
+a.download {
+  background: #fff;
+  color: #7386D5;
+}
+
+a.article,
+a.article:hover {
+  background: #6d7fcc !important;
+  color: #fff !important;
+}
+
+/* ---------------------------------------------------
+    CONTENT STYLE
+----------------------------------------------------- */
+
+.admin-content {
+  width: 100%;
+  padding: 20px;
+  min-height: 100vh;
+  transition: all 0.3s;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.nav-item {
+  padding: 0 10px;
+}
+
+/* ---------------------------------------------------
+    PADDING & MARGIN STYLE
+----------------------------------------------------- */
+
+.m-auto {
+  margin: auto;
+}
+
+.navbar-with-bottom {
+  padding-bottom: 20px;
+}
+
+.section-with-bottom {
+  padding-bottom: 90px;
+}
+
+.section-with-top {
+  padding-top: 45px;
+}
+
+.margin-with-top {
+  margin-top: 20px;
+}
+
+.margin-with-bottom {
+  margin-bottom: 45px;
+}
+
+.padding-0 {
+  padding: 0 !important;
+}
+
+.margin-bottom-0 {
+  margin-bottom: 0px;
+}
+
+.logo-padding {
+  padding: 20px 0;
+}
+
+.list-padding {
+  padding: 5px 0;
+}
+
+@media (max-width:$mobile-max){
+  .mobile-image-padding {
+    padding: 10px;
+  }
+}
+
+/* ---------------------------------------------------
+    FONT STYLE
+----------------------------------------------------- */
+
+
+h1.h1-mobile {
+  font-size: 3rem ;
+  padding: 20px 0;
+  font-weight: 800;
+}
+
+h2.h2-mobile {
+  font-size: 2.4rem ;
+  padding: 20px 0;
+  font-weight: 800;
+}
+
+h3.h3-mobile {
+  font-size: 1.75rem;
+  padding: 15px 0;
+  font-weight: 800;
+}
+
+@media (max-width: $lg-laptop) and (min-width: $pad-max){
+
+  h1.h1-mobile {
+    font-size: 30px ;
+  }
+
+  h2.h2-mobile {
+    font-size: 26px;
+  }
+
+  h3.h3-mobile {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width:$pad-max) and (min-width:$large-mobile ){
+  h1.h1-mobile {
+    font-size: 28px ;
+  }
+  h2.h2-mobile {
+    font-size: 24px ;
+  }
+  h3.h3-mobile {
+    font-size: 20px ;
+  }
+}
+@media (max-width:$large-mobile){
+  h1.h1-mobile {
+    font-size: 24px ;
+    padding: 20px 0;
+  }
+  h2.h2-mobile {
+    font-size: 20px ;
+  }
+  h3.h3-mobile {
+    font-size: 16px ;
+  }
+}
+
+@media (max-width:400px){
+  h2.h2-mobile {
+    font-size: 18px ;
+  }
+}
+
+.title-margin-0 {
+  margin: 0px;
+}
+
+.font-white {
+  color: #ffffff;
+}
+
+/* ---------------------------------------------------
+    FOOTER STYLE
+----------------------------------------------------- */
+
+.footer{
+  padding: 30px 0;
+  background-color: black;
+  color: white;
+}
+
+@media (max-width:$pad-max){
+  .footer {
+    text-align: center;
+  }
+}
+
+.footer__links {
+  a.footer-link {
+    text-decoration: none;
+    font-weight: bold;
+    color: white;
+    font-size: 16px;
+  }
+  a.footer-link:hover {
+    color: #232323;
+  }
+  a.footer-link {
+    span.macho{
+      text-decoration: none;
+    }
+  }
+}
+
+a.footer-mail-link {
+  text-decoration: none;
+  color: white;
+}
+
+h2.h2-footer {
+  padding: 10px;
+  font-size: 30px ;
+}
+h3.h3-footer {
+  font-size: 20px ;
+}
+
+@media (max-width:$pad-max) and (min-width:$xs-mobile ){
+  h2.h2-footer {
+    font-size: 25px ;
+  }
+  h3.h3-footer {
+    font-size: 16px ;
+  }
+}
+@media (max-width:$large-mobile){
+  h3.h3-footer {
+    font-size: 12px ;
+  }
+}
+
+
+/* ---------------------------------------------------
+    ALIGN STYLE
+----------------------------------------------------- */
+
+.form-label-align {
+  text-align: right;
+}
+
+@media (max-width:767px){
+  .form-label-align {
+    text-align: left;
+  }
+}
+
+.vertical-middle {
+  vertical-align: middle !important;
+}
+
+/* ---------------------------------------------------
+    BUTTON STYLE
+----------------------------------------------------- */
+
+.btn-brand {
+  color: #ffffff;
+  background-color: $default_color;
+  border-color: $default_color;
+}
+
+/* ---------------------------------------------------
+    PARAGRAPH STYLE
+----------------------------------------------------- */
+
+.heart-icon {
+  width: 80px;
+  margin: 0 20px;
+}
+
+/* ---------------------------------------------------
+    DEVICE SHOWN STYLE
+----------------------------------------------------- */
+
+.desktop-visible {
+  display: block;
+}
+
+.mobile-visible {
+  display: none;
+}
+
+.nav-desktop-visible {
+  display: block;
+}
+
+.nav-mobile-visible {
+  display: none;
+}
+
+@media (max-width:$large-mobile){
+  .desktop-visible {
+    display: none;
+  }
+
+  .mobile-visible {
+    display: block;
+  }
+}
+
+@media (max-width:$mobile-max){
+  .nav-desktop-visible {
+    display: none;
+  }
+
+  .nav-mobile-visible {
+    display: block;
+  }
+}
+
+/* ---------------------------------------------------
+    NEW LECTURE WEB STYLE
+----------------------------------------------------- */
+
+#welfare-banner {
+  display: block;
+  position: relative;
+  width: 100%;
+}
+
+#welfare-banner::after {
+  content: "";
+  opacity: 0.5;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;
+}
+
+.full-bg-image {
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+  background-position: center !important;
+}
+
+.container-welfare {
+  padding: 20px 0;
+}
+
+.container-margin {
+  margin-left: 40%;
+}
+
+@media (max-width: 500px) {
+  .container-margin {
+    margin-left: 5%;
+  }
+}
+
+h1.h1-mobile-welfare {
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+h2.h2-mobile-welfare {
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+@media screen and (max-width: 992px) {
+  h1.h1-mobile-welfare {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 992px) and (min-width: 500px) {
+  h2.h2-mobile-welfare {
+    font-size: 20px;
+  }
+
+  h2.h2-desktop-large.h2-mobile-welfare {
+    font-size: 28px;
+  }
+
+  img.img-align {
+    margin-top: 25%;
+  }
+}
+
+@media (max-width: 500px) {
+  h1.h1-mobile-welfare {
+    font-size: 30px;
+  }
+
+  h2.h2-mobile-welfare {
+    font-size: 25px;
+  }
+
+  h2.h2-desktop-large.h2-mobile-welfare {
+    font-size: 15px;
+  }
+}
+
+
+.nav-active > a {
+  color: #0C0;
+  text-decoration: none;
+}
+
+.nav-active > a:hover {
+  color: #0C0;
+  text-decoration: none;
+  background-color: #eeecec;
+}
+

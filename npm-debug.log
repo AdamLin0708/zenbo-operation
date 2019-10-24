@@ -1,0 +1,232 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/bin/node', '/usr/bin/npm', 'install', '--global', 'gulp' ]
+2 info using npm@2.15.11
+3 info using node@v4.9.1
+4 verbose install initial load of /usr/lib/package.json
+5 verbose readDependencies loading dependencies from /usr/lib/package.json
+6 silly cache add args [ 'gulp', null ]
+7 verbose cache add spec gulp
+8 silly cache add parsed spec Result {
+8 silly cache add   raw: 'gulp',
+8 silly cache add   scope: null,
+8 silly cache add   name: 'gulp',
+8 silly cache add   rawSpec: '',
+8 silly cache add   spec: 'latest',
+8 silly cache add   type: 'tag' }
+9 silly addNamed gulp@latest
+10 verbose addNamed "latest" is being treated as a dist-tag for gulp
+11 info addNameTag [ 'gulp', 'latest' ]
+12 silly mapToRegistry name gulp
+13 silly mapToRegistry using default registry
+14 silly mapToRegistry registry https://registry.npmjs.org/
+15 silly mapToRegistry data Result {
+15 silly mapToRegistry   raw: 'gulp',
+15 silly mapToRegistry   scope: null,
+15 silly mapToRegistry   name: 'gulp',
+15 silly mapToRegistry   rawSpec: '',
+15 silly mapToRegistry   spec: 'latest',
+15 silly mapToRegistry   type: 'tag' }
+16 silly mapToRegistry uri https://registry.npmjs.org/gulp
+17 verbose addNameTag registry:https://registry.npmjs.org/gulp not in flight; fetching
+18 verbose request uri https://registry.npmjs.org/gulp
+19 verbose request no auth needed
+20 info attempt registry request try #1 at 9:09:36 AM
+21 verbose request id df72b9188000a82d
+22 verbose etag W/"3496c638893f079150a4db42ca1bede5"
+23 verbose lastModified Mon, 06 May 2019 17:49:40 GMT
+24 http request GET https://registry.npmjs.org/gulp
+25 http 304 https://registry.npmjs.org/gulp
+26 verbose headers { date: 'Fri, 12 Jul 2019 09:11:14 GMT',
+26 verbose headers   connection: 'keep-alive',
+26 verbose headers   'set-cookie': [ '__cfduid=d1e5c94e55a1ece24492e402bee8c872b1562922674; expires=Sat, 11-Jul-20 09:11:14 GMT; path=/; domain=.npmjs.org; HttpOnly' ],
+26 verbose headers   'cf-cache-status': 'HIT',
+26 verbose headers   'cache-control': 'max-age=300',
+26 verbose headers   'cf-ray': '4f51e37acf1b4618-TPE',
+26 verbose headers   age: '3211',
+26 verbose headers   etag: '"3496c638893f079150a4db42ca1bede5"',
+26 verbose headers   'expect-ct': 'max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"',
+26 verbose headers   'last-modified': 'Mon, 06 May 2019 17:49:40 GMT',
+26 verbose headers   vary: 'accept-encoding, accept',
+26 verbose headers   'x-amz-meta-rev': '1909-019df15a4ea8b2235f532094564fee3c',
+26 verbose headers   server: 'cloudflare' }
+27 silly get cb [ 304,
+27 silly get   { date: 'Fri, 12 Jul 2019 09:11:14 GMT',
+27 silly get     connection: 'keep-alive',
+27 silly get     'set-cookie': [ '__cfduid=d1e5c94e55a1ece24492e402bee8c872b1562922674; expires=Sat, 11-Jul-20 09:11:14 GMT; path=/; domain=.npmjs.org; HttpOnly' ],
+27 silly get     'cf-cache-status': 'HIT',
+27 silly get     'cache-control': 'max-age=300',
+27 silly get     'cf-ray': '4f51e37acf1b4618-TPE',
+27 silly get     age: '3211',
+27 silly get     etag: '"3496c638893f079150a4db42ca1bede5"',
+27 silly get     'expect-ct': 'max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"',
+27 silly get     'last-modified': 'Mon, 06 May 2019 17:49:40 GMT',
+27 silly get     vary: 'accept-encoding, accept',
+27 silly get     'x-amz-meta-rev': '1909-019df15a4ea8b2235f532094564fee3c',
+27 silly get     server: 'cloudflare' } ]
+28 verbose etag https://registry.npmjs.org/gulp from cache
+29 verbose get saving gulp to /home/vagrant/.npm/registry.npmjs.org/gulp/.cache.json
+30 verbose correctMkdir /home/vagrant/.npm correctMkdir not in flight; initializing
+31 silly addNameTag next cb for gulp with tag latest
+32 silly addNamed gulp@4.0.2
+33 verbose addNamed "4.0.2" is a plain semver version for gulp
+34 silly mapToRegistry name gulp
+35 silly mapToRegistry using default registry
+36 silly mapToRegistry registry https://registry.npmjs.org/
+37 silly mapToRegistry data Result {
+37 silly mapToRegistry   raw: 'gulp',
+37 silly mapToRegistry   scope: null,
+37 silly mapToRegistry   name: 'gulp',
+37 silly mapToRegistry   rawSpec: '',
+37 silly mapToRegistry   spec: 'latest',
+37 silly mapToRegistry   type: 'tag' }
+38 silly mapToRegistry uri https://registry.npmjs.org/gulp
+39 verbose addRemoteTarball https://registry.npmjs.org/gulp/-/gulp-4.0.2.tgz not in flight; adding
+40 verbose addRemoteTarball [ 'https://registry.npmjs.org/gulp/-/gulp-4.0.2.tgz',
+40 verbose addRemoteTarball   '543651070fd0f6ab0a0650c6a3e6ff5a7cb09caa' ]
+41 info retry fetch attempt 1 at 9:09:36 AM
+42 info attempt registry request try #1 at 9:09:36 AM
+43 http fetch GET https://registry.npmjs.org/gulp/-/gulp-4.0.2.tgz
+44 http fetch 200 https://registry.npmjs.org/gulp/-/gulp-4.0.2.tgz
+45 silly fetchAndShaCheck shasum 543651070fd0f6ab0a0650c6a3e6ff5a7cb09caa
+46 verbose addTmpTarball /tmp/npm-5039-08a9303b/registry.npmjs.org/gulp/-/gulp-4.0.2.tgz not in flight; adding
+47 verbose addTmpTarball already have metadata; skipping unpack for gulp@4.0.2
+48 verbose correctMkdir /home/vagrant/.npm correctMkdir not in flight; initializing
+49 silly cache afterAdd gulp@4.0.2
+50 verbose afterAdd /home/vagrant/.npm/gulp/4.0.2/package/package.json not in flight; writing
+51 verbose correctMkdir /home/vagrant/.npm correctMkdir not in flight; initializing
+52 verbose afterAdd /home/vagrant/.npm/gulp/4.0.2/package/package.json written
+53 silly install resolved [ { name: 'gulp',
+53 silly install resolved     version: '4.0.2',
+53 silly install resolved     description: 'The streaming build system.',
+53 silly install resolved     homepage: 'https://gulpjs.com',
+53 silly install resolved     author:
+53 silly install resolved      { name: 'Gulp Team',
+53 silly install resolved        email: 'team@gulpjs.com',
+53 silly install resolved        url: 'https://gulpjs.com/' },
+53 silly install resolved     contributors: [ [Object], [Object] ],
+53 silly install resolved     repository: { type: 'git', url: 'git+https://github.com/gulpjs/gulp.git' },
+53 silly install resolved     license: 'MIT',
+53 silly install resolved     engines: { node: '>= 0.10' },
+53 silly install resolved     main: 'index.js',
+53 silly install resolved     bin: { gulp: './bin/gulp.js' },
+53 silly install resolved     scripts:
+53 silly install resolved      { lint: 'eslint .',
+53 silly install resolved        pretest: 'npm run lint',
+53 silly install resolved        test: 'nyc mocha --async-only',
+53 silly install resolved        'azure-pipelines': 'nyc mocha --async-only --reporter xunit -O output=test.xunit',
+53 silly install resolved        coveralls: 'nyc report --reporter=text-lcov | coveralls' },
+53 silly install resolved     dependencies:
+53 silly install resolved      { 'glob-watcher': '^5.0.3',
+53 silly install resolved        'gulp-cli': '^2.2.0',
+53 silly install resolved        undertaker: '^1.2.1',
+53 silly install resolved        'vinyl-fs': '^3.0.0' },
+53 silly install resolved     devDependencies:
+53 silly install resolved      { coveralls: 'github:phated/node-coveralls#2.x',
+53 silly install resolved        eslint: '^2.13.1',
+53 silly install resolved        'eslint-config-gulp': '^3.0.1',
+53 silly install resolved        expect: '^1.20.2',
+53 silly install resolved        mkdirp: '^0.5.1',
+53 silly install resolved        mocha: '^3.0.0',
+53 silly install resolved        nyc: '^10.3.2',
+53 silly install resolved        rimraf: '^2.6.3' },
+53 silly install resolved     keywords:
+53 silly install resolved      [ 'build',
+53 silly install resolved        'stream',
+53 silly install resolved        'system',
+53 silly install resolved        'make',
+53 silly install resolved        'tool',
+53 silly install resolved        'asset',
+53 silly install resolved        'pipeline',
+53 silly install resolved        'series',
+53 silly install resolved        'parallel',
+53 silly install resolved        'streaming' ],
+53 silly install resolved     gitHead: '069350a5febf65adc27bc816a7805471b7d96f03',
+53 silly install resolved     bugs: { url: 'https://github.com/gulpjs/gulp/issues' },
+53 silly install resolved     _id: 'gulp@4.0.2',
+53 silly install resolved     _npmVersion: '6.4.1',
+53 silly install resolved     _nodeVersion: '10.15.1',
+53 silly install resolved     _npmUser: { name: 'phated', email: 'blaine.bublitz@gmail.com' },
+53 silly install resolved     dist:
+53 silly install resolved      { integrity: 'sha512-dvEs27SCZt2ibF29xYgmnwwCYZxdxhQ/+LFWlbAW8y7jt68L/65402Lz3+CKy0Ov4rOs+NERmDq7YlZaDqUIfA==',
+53 silly install resolved        shasum: '543651070fd0f6ab0a0650c6a3e6ff5a7cb09caa',
+53 silly install resolved        tarball: 'https://registry.npmjs.org/gulp/-/gulp-4.0.2.tgz',
+53 silly install resolved        fileCount: 6,
+53 silly install resolved        unpackedSize: 20855,
+53 silly install resolved        'npm-signature': '-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJc0HOxCRA9TVsSAnZWagAA+W4P/jo3ofgRwbXcy2U3LPNH\njJjwnCrfB8nLZ51eE1ZgeDHqx5IwyaOayBty4ZRzfOQR9w3rcz7jdZ+oDPTg\noUzUTjGhL2sKAFUPKlV1Mc77+m97arHG2ziqryhsrYrNf/Jkri3YSqAfVg6F\nM3+2YoE80c7WbJDGgycawST/HFPc2RCHYO7EVV3L1vyQ94YBckHYqBa0UNq9\ndpMDDLndaWqRywScoH3t9CsnR89q/ybRPZ2sTYUCrUPFq/X0uT/KkbwgXnuX\nkg+Hlz4kOzFddojlLXFj+GMaqLRVkgXP+rlLA0e/uKks75YuQmo3r4f4dvL1\nHKdJD4zbeFGimnqQlTX/HYx5du2X7TgA/oiheHZ2LKPVSXQ8n5zHQO3DP4LX\ngOGM9fDT7iTzMx5vkrmp2DIp7cJzR1M7E3rRINcvVnrgnrjmIsxAIHs76r7l\nJiE+maTzNeCtV/0S/kNVgvJOO7D0xqfhQPVKRQTcGvCkeEiMa/HBwHj6W5fS\nbvQ+zS9MxnW3mpSz7CbaehYL2O9Bgp92wnSTzwUjodCh16u6oTI5Chtuhi+d\nBvWTMDZAKLkQLGm4x819mD1r2N18EF/q9tiXAovBfjF/rwdGcjzWVoX0VhGB\nIWue5e8z1BijKWSBkcT+CUU7jcNA6rBcXKAU5MSlEAV5bm5Pi0ufteLPx9pF\nyrRw\r\n=2YQD\r\n-----END PGP SIGNATURE-----\r\n' },
+53 silly install resolved     maintainers: [ [Object], [Object] ],
+53 silly install resolved     directories: {},
+53 silly install resolved     _npmOperationalInternal:
+53 silly install resolved      { host: 's3://npm-registry-packages',
+53 silly install resolved        tmp: 'tmp/gulp_4.0.2_1557164976354_0.27474407068151185' },
+53 silly install resolved     _hasShrinkwrap: false,
+53 silly install resolved     _shasum: '543651070fd0f6ab0a0650c6a3e6ff5a7cb09caa',
+53 silly install resolved     _resolved: 'https://registry.npmjs.org/gulp/-/gulp-4.0.2.tgz',
+53 silly install resolved     _from: 'gulp@latest' } ]
+54 info install gulp@4.0.2 into /usr/lib
+55 info installOne gulp@4.0.2
+56 verbose installOne of gulp to /usr/lib not in flight; installing
+57 verbose correctMkdir /home/vagrant/.npm/_locks correctMkdir not in flight; initializing
+58 verbose lock using /home/vagrant/.npm/_locks/gulp-3f670245b9c8bfc5.lock for /usr/lib/node_modules/gulp
+59 silly install write writing gulp 4.0.2 to /usr/lib/node_modules/gulp
+60 verbose unbuild lib/node_modules/gulp
+61 info preuninstall gulp@3.9.0
+62 info uninstall gulp@3.9.0
+63 verbose unbuild rmStuff gulp@3.9.0 from /usr/lib/node_modules
+64 silly gentlyRm /usr/bin/gulp is being gently removed
+65 silly gentlyRm verifying /usr is an npm working directory
+66 verbose rmMans man files are [ 'gulp.1' ] in /usr/share/man
+67 silly rmMan preparing to remove gulp.1
+68 silly gentlyRm /usr/share/man/man1/gulp.1.1 is being gently removed
+69 silly gentlyRm verifying /usr is an npm working directory
+70 silly gentlyRm containing path /usr is under npm's control, in /usr
+71 silly gentlyRm deletion target /usr/bin/gulp is under /usr
+72 verbose gentlyRm vacuuming from /usr/bin/gulp up to /usr
+73 silly gentlyRm containing path /usr is under npm's control, in /usr
+74 silly gentlyRm deletion target /usr/share/man/man1/gulp.1.1 is under /usr
+75 verbose gentlyRm vacuuming from /usr/share/man/man1/gulp.1.1 up to /usr
+76 silly vacuum-fs removing /usr/bin/gulp
+77 verbose unlock done using /home/vagrant/.npm/_locks/gulp-3f670245b9c8bfc5.lock for /usr/lib/node_modules/gulp
+78 verbose stack Error: EACCES: permission denied, unlink '/usr/bin/gulp'
+78 verbose stack     at Error (native)
+79 verbose cwd /home/vagrant/Code/tw/lecture-web
+80 error Linux 3.19.0-25-generic
+81 error argv "/usr/bin/node" "/usr/bin/npm" "install" "--global" "gulp"
+82 error node v4.9.1
+83 error npm  v2.15.11
+84 error path /usr/bin/gulp
+85 error code EACCES
+86 error errno -13
+87 error syscall unlink
+88 error Error: EACCES: permission denied, unlink '/usr/bin/gulp'
+88 error     at Error (native)
+88 error  { [Error: EACCES: permission denied, unlink '/usr/bin/gulp']
+88 error   errno: -13,
+88 error   code: 'EACCES',
+88 error   syscall: 'unlink',
+88 error   path: '/usr/bin/gulp' }
+89 error Please try running this command again as root/Administrator.
+90 verbose exit [ -13, true ]
+91 verbose unbuild lib/node_modules/gulp
+92 info preuninstall gulp@3.9.0
+93 info uninstall gulp@3.9.0
+94 verbose unbuild rmStuff gulp@3.9.0 from /usr/lib/node_modules
+95 silly gentlyRm /usr/bin/gulp is being gently removed
+96 silly gentlyRm verifying /usr is an npm working directory
+97 verbose rmMans man files are [ 'gulp.1' ] in /usr/share/man
+98 silly rmMan preparing to remove gulp.1
+99 silly gentlyRm /usr/share/man/man1/gulp.1.1 is being gently removed
+100 silly gentlyRm verifying /usr is an npm working directory
+101 silly gentlyRm containing path /usr is under npm's control, in /usr
+102 silly gentlyRm deletion target /usr/bin/gulp is under /usr
+103 verbose gentlyRm vacuuming from /usr/bin/gulp up to /usr
+104 silly gentlyRm containing path /usr is under npm's control, in /usr
+105 silly gentlyRm deletion target /usr/share/man/man1/gulp.1.1 is under /usr
+106 verbose gentlyRm vacuuming from /usr/share/man/man1/gulp.1.1 up to /usr
+107 silly vacuum-fs removing /usr/bin/gulp
+108 error error rolling back Error: EACCES: permission denied, unlink '/usr/bin/gulp'
+108 error error rolling back     at Error (native)
+108 error error rolling back  { [Error: EACCES: permission denied, unlink '/usr/bin/gulp']
+108 error error rolling back   errno: -13,
+108 error error rolling back   code: 'EACCES',
+108 error error rolling back   syscall: 'unlink',
+108 error error rolling back   path: '/usr/bin/gulp' }
