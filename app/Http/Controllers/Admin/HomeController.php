@@ -13,8 +13,6 @@ use Illuminate\Support\Facades\Log;
 class HomeController extends BackendController
 {
     public function main(){
-
-        Log::info('ok');
         return view('admin.main');
     }
 

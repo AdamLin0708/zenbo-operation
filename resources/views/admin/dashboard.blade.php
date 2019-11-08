@@ -14,7 +14,7 @@
       </div>
       <ul class="list-unstyled components">
         <li>
-          <a href="#">建立講座預約單</a>
+          <a href="{{ 'videoLists' }}">影片列表</a>
         </li>
         <li>
           <a href="{{ route('logout')  }}">登出</a>
