@@ -47,11 +47,20 @@ EOF;
         $video_name = $request['video_name'];
         $video_description = $request['video_description'];
         $video_url_link = $request['video_url_link'];
+        $video_specific_id = $request['video_specific_id'];
+
+        $check = DB::table('vd_video')->where('video_specific_id', $video_specific_id)->get();
+
+        if(!empty($check)){
+            \Session::flash('error', '影片ID不可重複！' );
+            return redirect()->back()->withInput();
+        }
 
         DB::table('vd_video')->insert([
             'name' => $video_name,
             'description' => $video_description,
             'url_link' => $video_url_link,
+            'video_specific_id' => $video_specific_id,
             'created_at' => date('Y-m-d H:i:s'),
             'created_by' => $this->user_identity_info->user_id,
             'updated_at' => date('Y-m-d H:i:s'),
@@ -78,12 +87,22 @@ EOF;
         $video_name = $request['video_name'];
         $video_description = $request['video_description'];
         $video_url_link = $request['video_url_link'];
+        $video_specific_id = $request['video_specific_id'];
 
+        $check = DB::table('vd_video')
+            ->where('video_id', '!=', $video_id)
+            ->where('video_specific_id', $video_specific_id)->get();
+
+        if(!empty($check)){
+            \Session::flash('error', '影片ID不可重複！' );
+            return redirect()->back()->withInput();
+        }
 
         DB::table('vd_video')->where('video_id', $video_id)->update([
             'name' => $video_name,
             'description' => $video_description,
             'url_link' => $video_url_link,
+            'video_specific_id' => $video_specific_id,
             'updated_at' => date('Y-m-d H:i:s'),
             'updated_by' => $this->user_identity_info->user_id
         ]);

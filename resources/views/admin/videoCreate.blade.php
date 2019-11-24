@@ -28,6 +28,12 @@
                         <input type='text' class="form-control" name="video_url_link" required />
                     </td>
                 </tr>
+                <tr>
+                    <th style="vertical-align: middle">影片ID</th>
+                    <td>
+                        <input type='text' class="form-control" name="video_specific_id" required />
+                    </td>
+                </tr>
                 </thead>
             </table>
             <button type="submit" class="btn btn-danger">新增</button>
