@@ -32,6 +32,10 @@ Route::group(['middleware' => 'auth'], function () {
         'as' => 'main', 'uses' => 'Admin\HomeController@main'
     ]);
 
+    Route::get('/admin/memberLists', [
+        'as' => 'memberLists', 'uses' => 'Admin\HomeController@memberLists'
+    ]);
+
     Route::get('/admin/videoLists', [
         'as' => 'videoLists', 'uses' => 'Admin\VideoController@lists'
     ]);

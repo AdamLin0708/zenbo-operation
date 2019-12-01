@@ -14,6 +14,9 @@
       </div>
       <ul class="list-unstyled components">
         <li>
+          <a href="{{ 'memberLists' }}">會員列表</a>
+        </li>
+        <li>
           <a href="{{ 'videoLists' }}">影片列表</a>
         </li>
         <li>
