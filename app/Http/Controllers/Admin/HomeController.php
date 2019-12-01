@@ -19,7 +19,7 @@ class HomeController extends BackendController
     public function memberLists(){
 
         $members = Db::table('usr_user')
-            ->select('user_id', 'email_login', 'created_at')
+            ->select('user_id', 'email_login', 'age', 'gender', 'created_at')
             ->where('user_type_code_abbr', 'ZAPP')
             ->orderBy('created_at', 'desc')
             ->get();
