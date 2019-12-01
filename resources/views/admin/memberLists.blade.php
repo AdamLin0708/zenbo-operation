@@ -9,6 +9,8 @@
                     <tr>
                         <th>#</th>
                         <th>Email</th>
+                        <th>年紀</th>
+                        <th>性別</th>
                         <th>註冊時間</th>
                     </tr>
                     </thead>
@@ -18,6 +20,12 @@
                             <td style="vertical-align: middle">{{ $key+1 }}</td>
                             <td style="vertical-align: middle">
                                 {{ $member->email_login }}
+                            </td>
+                            <td style="vertical-align: middle">
+                                {{ $member->age }}
+                            </td>
+                            <td style="vertical-align: middle">
+                                {{ $member->gender }}
                             </td>
                             <td style="vertical-align: middle">
                                 {{ $member->created_at }}
