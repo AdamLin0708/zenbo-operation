@@ -13,14 +13,14 @@
                     </tr>
                     </thead>
                     <tbody>
-                    @foreach($memberLists as $key => $memberList)
+                    @foreach($members as $key => $member)
                         <tr>
                             <td style="vertical-align: middle">{{ $key+1 }}</td>
                             <td style="vertical-align: middle">
-                                {{ $memberList->email_login }}
+                                {{ $member->email_login }}
                             </td>
                             <td style="vertical-align: middle">
-                                {{ $memberList->created_at }}
+                                {{ $member->created_at }}
                             </td>
                         </tr>
                     @endforeach
