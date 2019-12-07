@@ -50,7 +50,9 @@ class HomeController extends BackendController
             }
         }
 
-        dd($output);
+        $data = compact('output');
+
+        return view('videoAnswerLists', $data);
     }
 
 
