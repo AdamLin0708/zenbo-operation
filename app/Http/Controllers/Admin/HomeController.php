@@ -52,7 +52,7 @@ class HomeController extends BackendController
 
         $data = compact('output');
 
-        return view('videoAnswerLists', $data);
+        return view('admin.videoAnswerLists', $data);
     }
 
 
