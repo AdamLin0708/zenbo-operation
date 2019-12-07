@@ -38,7 +38,7 @@ class HomeController extends BackendController
         $output = array();
         foreach ($lists as $list){
             $output[$list->video_specific_id] = array();
-
+            $output[$list->video_specific_id]['video_name'] = $list->name;
             $output[$list->video_specific_id]['total_quiz_num'] = 0;
             $output[$list->video_specific_id]['correct_quiz'] = 0;
         }

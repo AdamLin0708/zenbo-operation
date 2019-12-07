@@ -20,7 +20,9 @@
                     <tbody>
                     @foreach($output as $key => $item)
                         <tr>
-                            <td style="vertical-align: middle">{{ $key }}</td>
+                            <td style="vertical-align: middle">
+                                {{ $item['video_name'] }}
+                            </td>
                             <td style="vertical-align: middle">
                                 {{ $item['total_quiz_num'] }}
                             </td>
