@@ -11,6 +11,7 @@
                 <table class="table table-bordered" style="margin-top: 30px">
                     <thead>
                     <tr>
+                        <th>影片名稱</th>
                         <th>影片ID</th>
                         <th>總題數</th>
                         <th>答對題數</th>
@@ -22,6 +23,9 @@
                         <tr>
                             <td style="vertical-align: middle">
                                 {{ $item['video_name'] }}
+                            </td>
+                            <td style="vertical-align: middle">
+                                {{ $key }}
                             </td>
                             <td style="vertical-align: middle">
                                 {{ $item['total_quiz_num'] }}
