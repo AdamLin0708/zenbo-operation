@@ -12,6 +12,7 @@
                         <th>年紀</th>
                         <th>性別</th>
                         <th>註冊時間</th>
+                        <th>影片答題狀況</th>
                     </tr>
                     </thead>
                     <tbody>
@@ -29,6 +30,9 @@
                             </td>
                             <td style="vertical-align: middle">
                                 {{ $member->created_at }}
+                            </td>
+                            <td style="vertical-align: middle">
+                                <a href="{{ route('videoAnswerLists', $member->user_id) }}" class="btn btn-primary"><i class="fas fa-pencil-alt"></i></a>
                             </td>
                         </tr>
                     @endforeach

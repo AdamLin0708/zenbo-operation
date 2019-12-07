@@ -29,5 +29,29 @@ class HomeController extends BackendController
         return view('admin.memberLists', $data);
     }
 
+    public function videoAnswerLists($user_id){
+        $lists = DB::table('vd_user_video_quiz')
+            ->where("user_id", $user_id)
+            ->get();
+
+        $output = array();
+        foreach ($lists as $list){
+            $output[$list->video_specific_id] = array();
+
+            $output[$list->video_specific_id]->total_quiz_num = 0;
+            $output[$list->video_specific_id]->correct_quiz = 0;
+        }
+
+        foreach ($lists as $list){
+            $output[$list->video_specific_id]->total_quiz_num += 1;
+
+            if($list->correct_flag) {
+                $output[$list->video_specific_id]->correct_quiz += 1;
+            }
+        }
+
+        dd($output);
+    }
+
 
 }
