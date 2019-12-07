@@ -31,7 +31,8 @@ class HomeController extends BackendController
 
     public function videoAnswerLists($user_id){
         $lists = DB::table('vd_user_video_quiz')
-            ->where("user_id", $user_id)
+            ->leftjoin('vd_video', 'vd_user_video_quiz.video_specific_id', '=', 'vd_video.video_specific_id')
+            ->where("vd_user_video_quiz.user_id", $user_id)
             ->get();
 
         $output = array();
