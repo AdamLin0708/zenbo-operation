@@ -38,15 +38,15 @@ class HomeController extends BackendController
         foreach ($lists as $list){
             $output[$list->video_specific_id] = array();
 
-            $output[$list->video_specific_id]->total_quiz_num = 0;
-            $output[$list->video_specific_id]->correct_quiz = 0;
+            $output[$list->video_specific_id]['total_quiz_num'] = 0;
+            $output[$list->video_specific_id]['correct_quiz'] = 0;
         }
 
         foreach ($lists as $list){
-            $output[$list->video_specific_id]->total_quiz_num += 1;
+            $output[$list->video_specific_id]['total_quiz_num'] += 1;
 
             if($list->correct_flag) {
-                $output[$list->video_specific_id]->correct_quiz += 1;
+                $output[$list->video_specific_id]['correct_quiz'] += 1;
             }
         }
 
