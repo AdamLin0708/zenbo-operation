@@ -28,7 +28,7 @@
                                 {{ $item['correct_quiz'] }}
                             </td>
                             <td style="vertical-align: middle">
-                                {{ ( $item['correct_quiz'] / $item['total_quiz_num'] ) * 100 }} %
+                                {{ ( round($item['correct_quiz'] / $item['total_quiz_num'], 2) ) * 100 }} %
                             </td>
                         </tr>
                     @endforeach
